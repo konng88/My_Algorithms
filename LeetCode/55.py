@@ -50,7 +50,7 @@ Memo-vresion of Dynammic Programming
 """
 Greedy-version
 """
-def canJump(nums) -> bool:
+def solution(nums) -> bool:
     if len(nums) == 1:
         return True
     if nums[0] == 0:
@@ -66,11 +66,7 @@ def canJump(nums) -> bool:
 
 
 
-a=list(reversed(range(1,25001)))
-a.append(1)
-a.append(0)
-a.append(0)
 
 
-print(canJump(a))
-print(canJump([3,0,0,0]))
+print(solution([2,3,1,1,4]))
+print(solution([3,2,1,0,4]))
