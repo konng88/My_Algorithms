@@ -1,3 +1,4 @@
+import random
 class solution:
     def __init__(self, nums):
         self.data = nums
@@ -8,8 +9,9 @@ class solution:
 
 
     def shuffle(self):
-        rand = random.sample(self.data, k=len(self.data))
-        print(list(rand))
-        return rand
+        l = self.data.copy()
+        random.shuffle(l)
+        return l
+
 s = solution([1,2,3,4,5,6,7,8,9])
 print(s.shuffle())

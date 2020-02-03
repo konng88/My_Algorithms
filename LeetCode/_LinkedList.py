@@ -3,6 +3,10 @@ class Node:
     def __init__(self,x):
         self.val = x
         self.next = None
+    def print(self):
+        while self != None:
+            print(self.val)
+            self = self.next
 
 class LinkedList:
     def __init__(self,l):
@@ -17,6 +21,12 @@ class LinkedList:
             self.start = l
         else:
             print('unknown data type')
+
+    def get_Node(self,idx):
+        node = self.start
+        for i in range(idx):
+            node = node.next
+        return node
 
     def print(self):
         output = ''
